@@ -13,11 +13,12 @@ include 'connection.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
-<body>
-    <div class="container my-5  shadow-lg p-3 mb-5 bg-white rounded" >
+<body >
+    <div class="container my-5  shadow-lg p-3 mb-5 bg-white rounded " >
         <h1 class="text-center shadow-lg p-3 mb-5 bg-white rounded">Student Management System</h1>
-        <button class="btn btn-primary"><a href="home.php" class="text-light">Add Student</a> </button>
-        <table class="table">
+        <button class="btn btn-primary"><a href="index.php" class="text-light">Add Student</a> </button>
+        <div class="table-responsive">
+        <table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th scope="col">Student ID</th>
@@ -46,8 +47,8 @@ include 'connection.php';
                   <td>'.$email.'</td>
                   <td>'.$course.'</td>
                   <td>
-                    <button class="btn btn-primary "><a href="update.php ? updateid='.$stuid.'" class="text-light"> Update </a></button>
-                    <button class="btn btn-danger"><a href="delete.php ? deleteid='.$stuid.'"  class="text-light"> Delete </a></button>
+                    <button class="btn btn-primary "><a href="update.php?updateid='.$stuid.'" class="text-light"> Update </a></button>
+                    <button class="btn btn-danger"><a href="delete.php?deleteid='.$stuid.'"  class="text-light"> Delete </a></button>
                   </td>
                   </tr>';
                    
@@ -57,6 +58,7 @@ include 'connection.php';
     
   </tbody>
 </table>
+</div>
     </div>
     
 </body>
